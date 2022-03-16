@@ -21,5 +21,6 @@ header, nav, section, footer{
     border-radius: 3px;
     margin-bottom: 10px;
 }  
+
 /*  동적레이아웃  */
 /* static(정적)레이아웃의 가로로 된 길이를 %(비율)로 적용함 */
