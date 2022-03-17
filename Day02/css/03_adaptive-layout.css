@@ -10,8 +10,8 @@
 body{ text-align: center;}
 
 header, footer{width: 400px;}
-nav, section{width: 400px;; height: 400px;}
-
+nav, section{/* float: left; */ width: 400px; height: 400px;}
+             /*  모바일로 보일땐 가로정렬이 아닌 세로정렬이 되야 하므로 float속성을 제거!*/
 footer{clear: both;}
 
 header, nav, section, footer{

@@ -14,6 +14,7 @@ nav {width: 200px; margin-right: 10px;}
 section{width: 750px;}
 
 footer{clear: both;}
+/* https://jwss.tistory.com/13#:~:text=float%EB%8A%94%20%EC%86%8D%EC%84%B1%EC%9D%B4%20%EC%83%81%EC%86%8D,%ED%98%84%EC%83%81%EC%9D%84%20%EB%A7%89%EC%9D%84%20%EC%88%98%20%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4. */
 
 header, nav, section, footer{
     padding: 20px 0;
