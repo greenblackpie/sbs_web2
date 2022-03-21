@@ -1,0 +1,30 @@
+
+*{margin: 0; padding: 0;}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: yellowgreen;
+}
+
+header a {
+    display: block;
+    float: left;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    line-height: 40px;
+}
+
+header a:hover {color: black; background-color: #ddd;}
+
+section {
+    width: 1200px;
+    height: 400px;
+    margin: 0 auto;
+    background-color: cornflowerblue;
+    border: 3px solid red;
+}
+

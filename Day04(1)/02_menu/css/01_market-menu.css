@@ -9,7 +9,7 @@ img {vertical-align: middle;}
 
 body { font-family: 'Noto Sans KR', sans-serif; }
 
-.claerfix {
+.clearfix {
     clear: both;
     display: block;
     content: '';

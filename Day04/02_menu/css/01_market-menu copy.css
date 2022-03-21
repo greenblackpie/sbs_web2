@@ -20,25 +20,24 @@ body { font-family: 'Noto Sans KR', sans-serif; }
 }
 
 /* 헤더 */
-header { margin-bottom: 20px; }
+header { margin-bottom: 20px;}
 
-/* 로그인 + 회원가입 */
-#userMenu { width: 1050px; margin: 0 auto;}
-#userMenu *{font-weight: 400; letter-spacing: -1px;}
-#userMenu .list_menu {
-    display: flex;
-    justify-content: flex-end; /* 주측 종료지점에 정렬 (오른쪽에 배치)*/
+#userMenu {width: 1050px; margin: 0 auto;}
+#userMenu * {
+    font-weight: 400;
+    letter-spacing: -1px;
 }
 
-#userMenu .menu {position: relative;}
+#userMenu .list_menu {
+    display: flex;
+    justify-content: flex-end;
+}
 
-/* userMenu 구분기호 */
-/* 로그인 ㅣ 회원가입 ㅣ 고객센터 */
-/* 가성선택자 :after - 문장의 마지막 영역을 선택 */
-/* 가상선택자 :not (제외할 선택자)
-    - 지정된 여러 개의 선택자 중에서 제외를 시킨다.
-*/
-#userMenu .menu:not(.last)::after{
+#userMenu .menu {
+    position: relative;
+}
+
+#userMenu .menu:not(.last)::after {
     content: '';
     float: right;
     width: 1px;
@@ -47,51 +46,33 @@ header { margin-bottom: 20px; }
     margin-top: 4px;
 }
 
-#userMenu .menu .link_menu {padding: 0 13px;}
+#userMenu .menu .link_menu { padding: 0 13px;}
 
-/* 헤더 - 로고 */
-#headerLogo {
-    position: relative; width: 1050px; height: 63px; margin: 0 auto;
-}
+#headerLogo { position: relative; width: 1050px; height: 63px; margin: 0 auto; }
+#headerLogo .logo { display: flex; justify-content: center; }
+#headerLogo .logo img { width: 103px; height: 79px; }
 
-#headerLogo .logo { display: flex; justify-content: center;}
-#headerLogo .logo img {width: 103px; height: 79px;}
-
-/* GNB */
-#gnb {
+#gnb{
     position: sticky;
     top: 0;
     height: 55px;
     z-index: 1000;
     display: flex;
     justify-content: center;
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 3px rgba(0,0,0,0.3);
 
 }
 
-#gnb .gnb_kurly {width: 1050px; background-color: white; letter-spacing: -1px;}
+#gnb .gnb_kurly {width: 1050px; background-color: #fff; letter-spacing: -1px;}
 #gnb .inner_gnbkurly {position: relative; width: 1050px; height: 56px; margin: 0 auto;}
 
-
-/* 메뉴 영역 - 메인 메뉴 */
-#gnb .gnb_main ul.gnb a{
-    float: left;
-    width: 124px;
-    height: 55px;
-    padding: 16px 0 0; 
-    color: #333;
-    line-height: 20px;
-    text-align: center;
+#gnb .gnb_main ul.gnb a .txt {font-weight: 700;}
+#gnb .gnb_main ul.gnb a span:hover {
+    color: #5f0090;
+    border-bottom: 1.5px solid #5f0090;
 }
 
-#gnb .gnb_main ul.gnb a .txt { font-weight: 700px; }
-#gnb .gnb_main ul.gnb a span:not(.ico):hover {
-    color: #5f0080;
-    border-bottom: 1.5px solid #5f0080  ;
-}
-
-/* 메뉴 영역 - 전체카테고리 옆 햄버거 메뉴 아이콘 */
-#gnb .gnb_main .menu1 .ico{
+#gnb .gnb_main .menu1 .ico {
     float: left;
     width: 16px;
     height: 14px;
@@ -99,7 +80,6 @@ header { margin-bottom: 20px; }
     background: url(../img/ico_gnb_all_off.png) no-repeat;
 }
 
-/* 검색 영역 */
 #gnb .gnb_search {
     position: absolute;
     right: 108px;
@@ -110,18 +90,19 @@ header { margin-bottom: 20px; }
 #gnb .gnb_search .input_search {
     width: 195px;
     height: 36px;
-    background-color: #f7f7f7;
+    padding: 0 23px 0 14px;
     border: 1px solid #f7f7f7;
     border-radius: 18px;
-    padding: 0 23px 0 14px;
-    font-weight: 400;
+    background-color: #f7f7f7;
     color: #666;
+    font-weight: 400;
     line-height: 16px;
-    outline: none;        /* 입력상자의 윤곽선(input의 기본윤곽선)을 없앰 */
+    outline: none;
 }
 
-/* 검색 영역 - 검색 아이콘 */
-#gnb .gnb_search .btn_search{
+
+
+#gnb .gnb_search .btn_search {
     width: 30px;
     height: 30px;
     position: absolute;
@@ -129,7 +110,6 @@ header { margin-bottom: 20px; }
     top: 3px;
 }
 
-/* 배송지 설정 아이콘 */
 #gnb .btn_location {
     overflow: hidden;
     position: absolute;
@@ -144,7 +124,6 @@ header { margin-bottom: 20px; }
     cursor: pointer;
 }
 
-/* 장바구니 아이콘 */
 #gnb .cart_count {
     position: absolute;
     right: -5px;
@@ -153,12 +132,20 @@ header { margin-bottom: 20px; }
 
 #gnb .cart_count .inner_cartcount {
     text-align: center;
-    text-shadow: 400;
+    font-weight: 400;
 }
 
 #gnb .cart_count .btn_cart {
     display: block;
     width: 36px;
     height: 36px;
-    background: url(../img/ico_cart.svg) no-repeat 50% 50% ;
+    background: url(../img/ico_cart.svg) no-repeat 50% 50%;
 }
+
+section {
+    width: 1050px;
+    height: 400px;
+    margin: 0 auto;
+    border: 1px solid cornflowerblue;
+}
+
