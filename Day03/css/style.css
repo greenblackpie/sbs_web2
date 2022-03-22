@@ -60,8 +60,8 @@ section.visual img {width: 100%;}
 /* 이미지 위의 텍스트 영역 */
 section.visual .mainTitle{
     position: absolute;
-    left: 50%;
     top: 20%;
+    left: 50%;
     transform: translateX(-50%);
     text-align: center;
     color: white;
