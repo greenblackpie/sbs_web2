@@ -87,7 +87,36 @@ body {
 
 /* 반응형 - ~720px이하 */
 @media screen and (max-width: 720px) {
+    .wrapper { width: 576px ; }
+    header, nav { width: 576px ; }
+    header h1 {padding-right: 20px;}
+    header .logo { width: 130px; }
+    
 
+
+    .main-nav {
+        justify-content: right;
+        display: flex;
+    }
+    .main-nav a {
+        margin-left: 10px;
+        font-size: 1rem;
+    }
+
+
+    .main-content { 
+        width: 576px;
+        margin-top: 3%; 
+        position: absolute;
+        top: 50%; left: 50%; 
+        transform: translate(-50%, -50%);
+    }
+    .main-content .page-title { font-size: 2rem;}
+    .main-content p { font-size: 1rem;}
+    .button {
+        font-size: 0.8rem;
+        padding: 15px 28px;
+    }
     /* 로고 */
     /* 메뉴 */
     /* 타이틀 */
