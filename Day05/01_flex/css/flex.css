@@ -1,0 +1,86 @@
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    border: 3px dashed orange;
+}
+
+
+/* flex container */
+.flex-container{
+    display: flex;    /* flex 컨테이너로 지정 */
+    border: 1px solid lightcoral;
+}
+
+.item{
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    line-height: 60px;
+    background-color: cornflowerblue;
+    color: white;
+    box-sizing: border-box;
+}
+
+/* flex-direction */
+.row {flex-direction: row;}
+.column {flex-direction: column;}
+.row-reverse {flex-direction: row-reverse;}
+.column-reverse {flex-direction: column-reverse;}
+
+/* flex-wrap */
+.nowrap { flex-wrap: nowrap;} /* item 크기를 늘리거나 줄이더라도 컨텐츠크기에 맞게 넣음(줄바꿈X) */
+.wrap { flex-wrap: wrap;} /* item 크기를 일정하게 가져가면서 컨텐츠크기보다 넘치면 알아서 줄바꿈됨 */
+.wrap-reverse { flex-wrap: wrap-reverse;}
+
+.row-wrap {
+    flex-flow: row wrap;
+    /* 단축속성으로 밑에 두개를 합친 속성이다! flex-flow! */
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
+}
+
+/* justify-content */
+/* : 주축의 정렬방식을 지정하는 속성 */
+.center {justify-content: center;}
+.start { justify-content: flex-start;}
+.end {justify-content: flex-end;}
+.between {justify-content: space-between;}
+.around {justify-content: space-around;}
+.evenly {justify-content: space-evenly;}
+
+/* 교차축 */
+.cross {height: 600px;}
+
+/* align-content */
+.content-stretch {align-content: stretch;}
+/* stretch - 적용될 item 의 width/height 가 auto 이어야 적용된다. */
+.content-stretch .item {height: auto;}
+
+.content-start {align-content: flex-start;}/* acfs */
+.content-end{align-content: flex-end;}/* acfe */
+.content-center{align-content: center;}/* acc */
+.content-between{align-content: space-between;}/* acsb */
+.content-around{align-content: space-around;}/* acso */
+
+/* align-items */
+.cross-center {align-items: center;}/* aic */
+.cross-start {align-items: flex-start;}/* aifs */
+.cross-end {align-items: flex-end;}/* aife */
+.cross-stretch {align-items: stretch;}/* aistre */
+.cross-stretch .item {height: auto; line-height: 100px;}
+.cross-baseline {align-items: baseline;}/* aib */
+
+/* 정가운데 (수평 가운데/수직 가운데 */
+/* 이거는 컨테이너 안에서 정가운데로 배치하는 것임!! */
+/* absolute와 다르게 부모요소를 기준으로 하는 것이 아닌 컨테이너를 기준으로 정가운데! */
+.center-center{
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-center .item {font-size: 14px;}
