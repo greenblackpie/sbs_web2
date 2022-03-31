@@ -182,7 +182,7 @@ section.about ul li a .text p.more {
 }
 
 /* 폰트어썸 아이콘 커스텀 (화살표 arrow) */
-section.aobut ul li a .text p.more::before{
+section.about ul li a .text p.more::before{
     font-family: FontAwesome;
     content: '\f178';
     font-size: 20px;
@@ -238,7 +238,7 @@ section.innovations .imgBox .inner .bottom a {
     background-color: #ff8342;
     border-radius: 50px;
 }
-    
+
 
 section.innovations .imgBox .inner .bottom a:hover,
 section.innovations .imgBox .inner .bottom a:focus {
