@@ -40,27 +40,30 @@ header {
     margin: 0 auto;
     box-sizing: border-box;
     overflow: hidden;
+    display: flex;
 }
 
 /* 로고 */
-.innerHeader .logo {float: left;}
-.innerHeader .logo img { width: 100%; height: auto;}
+.innerHeader .logo {display: flex;}
+.innerHeader .logo img { width: 250px; height: auto;}
 
 /* GNB */
-.innerHeader .gnb {float: left; margin-left: 80px; }
-.innerHeader .gnb li {float: left; margin-right: 80px;}
+.innerHeader .gnb {width: 30%; margin-left: 80px;}
+.innerHeader .gnb ul { display: flex; justify-content: space-between;}
+/* .innerHeader .gnb li {  margin-right: 80px;} */
 .innerHeader .gnb li a {
-    display: block; width: 100%; height: 100%; text-align: center;
+    width: 100%; height: 100%; text-align: center;
     color: #fff; font-size: 16px;
 }
 .innerHeader .gnb li a:hover,
 .innerHeader .gnb li a:focus {color: #ff8342;}
 
 /* util */
-.innerHeader .tnb {float: left;}
-.innerHeader .tnb li{float: left; margin-right: 25px;}
-.innerHeader .tnb li a{
-    display: block; width: 100%; height: 100%; text-align: center; 
+.innerHeader .tnb {width: 30%; margin-left: 50px;}
+.innerHeader .tnb ul {display: flex; justify-content: space-evenly;}
+/* .innerHeader .tnb li{  margin-right:px;} */
+.innerHeader .tnb li a{ 
+     width: 500px; height: 100%; text-align: center; 
     color: #fff; font-size: 16px;
 }
 
@@ -69,11 +72,12 @@ header {
 }
 
 .innerHeader .tnb li:last-child a {
-    width: 105px;
+    width: 200px;
     line-height: 2;
     border: 1px solid #fff;
     border-radius: 30px;
-    margin-top: 35px;
+    padding: 5px 20px;
+    /* margin-top: 35px; */
 }
 
 .innerHeader .tnb li:last-child a:hover{
@@ -156,11 +160,11 @@ section .title p {font-size: 18px; color: #555;}
 section.about {background-color: #fff; padding: 80px 0;}
 section.about ul{
     margin: 30px auto; width: 1400px; border: 1px solid #ddd;
-    overflow: hidden;
+    overflow: hidden; display: flex; 
 }
 
-section.about ul li {float: left; width: calc(100%/3); }
-section.about ul li a {display: block; width: 100%; height: 100%;}
+section.about ul li {justify-content: space-between;}
+section.about ul li a {width: 100%; height: 100%;}
 section.about ul li a p.img {width: 100%; overflow: hidden;}
 section.about ul li a p.img img {width: 100%; height: auto; transition: all 0.8s;}
 
@@ -229,13 +233,15 @@ section.innovations .imgBox .inner h3 {
 section.innovations .imgBox .inner h3 span { color: #ff8342}
 section.innovations .imgBox .inner .bottom {
     padding: 35px 85px; box-sizing: border-box; color: #fff;
-    overflow: hidden; line-height: 1.6;
+    overflow: hidden; line-height: 1.6; display: flex;
 }
-section.innovations .imgBox .inner .bottom p {float: left;}
+section.innovations .imgBox .inner .bottom p { width: 80%; justify-content: space-between;}
 section.innovations .imgBox .inner .bottom a {
-    float: right;
-    padding: 7px 30px; 
-    background-color: #ff8342;
+    line-height: 1.3;
+    height: 20px;
+    padding: 6px 30px;
+    margin-left: 30px;
+    background-color: #ff8342; 
     border-radius: 50px;
 }
 
@@ -268,17 +274,17 @@ section.me ul.list li h3{
 section.me ul.list li h3 span {position: absolute; left: -35px; color: #ff8342;}
 section.me ul.list li > p {line-height: 1.6; margin-bottom: 20px;}
 section.me ul.list li > a {
-    display: inline-block; font-weight: bold; font-size: 16px; line-height: 1.6;
-}
+    display: flex; font-weight: bold; font-size: 16px; line-height: 1.6;
+}z  
 section.me ul.list li > a span {
     color: #ff8342; font-weight: bold; margin-left: 3px; font-size: 14px;
 }
 
 /* 인재상 */
 section.me ul.in {margin-bottom: 30px;}
-section.me ul.in li {margin-bottom: 10px; overflow: hidden;}
-section.me ul.in li em {float: left; width: 12%; font-weight: bold;}
-section.me ul.in li p {float: left; width: 88%; position: relative;}
+section.me ul.in li {margin-bottom: 10px; overflow: hidden; display: flex;}
+section.me ul.in li em { width: 12%; font-weight: bold;}
+section.me ul.in li p { width: 88%; position: relative;}
 /* 가상선택자를 이용한 기호 스타일링 */
 section.me ul.in li p::before {
     content: '';
@@ -291,27 +297,36 @@ section.me ul.in li p::before {
     left: -40px;
 }
 section.me button {
-    display: block;
-    width: 280px;
+    border: none;
+    display: flex;  
+    justify-content: center;
+    width: 20%;
     background-color: #ff8342;
-    padding: 10px 0;
+    padding: 13px 0;
     font-weight: bold;
-    text-align: center;
     margin: 0 auto;
     color: #fff;
     border-radius: 50px;
+}
+section.me button:hover {
+    background-color: #999;
+    cursor: pointer;
 }
 
 /* 섹션 : sns */
 section.sns {margin-bottom: 60px;}
 section.sns ul {
-    width: 1400px; margin: 50px auto; overflow: hidden;
+    width: 1400px; margin: 50px auto; overflow: hidden; 
+    display: flex;
 }
 section.sns ul li {
-    float: left; width: calc(97%/3); margin-right: 1.5%;
+     /* width: calc(97%/3); margin-right: 1.5%; */
+     width: 500px;
+     justify-content: space-between;
+     margin-right: 1.5%;
 }
 section.sns ul li:last-child { margin-right: 0; } 
-section.sns ul li a {display: block; width: 100%; height: 100%;}
+section.sns ul li a { width: 100%; height: 100%;}
 section.sns ul li a p.img {overflow: hidden; position: relative;}
 section.sns ul li a p.img img {width: 100%;}
 
@@ -372,14 +387,14 @@ section.sns ul li a .bottom p.time::before {
 
 /* 푸터 */
 footer {border-top: 1px solid #999; padding: 30px 0 50px;}
-footer .inner {width: 1600px; margin: 0 auto; overflow: hidden;}
-footer .inner .address {float: left; margin-left: 100px; margin-top: 10px;}
+footer .inner {width: 1600px; margin: 0 auto; overflow: hidden; display: flex;}
+footer .inner .address { justify-content: space-between; width: 40%; margin-left: 100px; margin-top: 10px;}
 footer .inner .address li:first-child {font-weight: bold; margin-bottom: 10px;}
 footer .inner .address li:last-child {color: #999;}
 
 
-footer .inner .list {float: right; margin-top: 10px;}
-footer .inner .list li {float: left; margin-left: 80px;}
+footer .inner .list { display: flex; margin-left: 50px; margin-top: 10px;}
+footer .inner .list li { margin-left: 80px;}
 footer .inner .list li a {display: block; width: 100%; height: 100%; position: relative;}
 footer .inner .list li a::after {
     content: ''; width: 4px; height: 4px; border-radius: 50%;
