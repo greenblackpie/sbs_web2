@@ -328,6 +328,7 @@ section.sns ul li {
 section.sns ul li:last-child { margin-right: 0; } 
 section.sns ul li a { width: 100%; height: 100%;}
 section.sns ul li a p.img {overflow: hidden; position: relative;}
+section.sns ul li:nth-child(1) img {justify-content: stretch; height: 300px}
 section.sns ul li a p.img img {width: 100%;}
 
 /* 이미지 호버 효과 */
